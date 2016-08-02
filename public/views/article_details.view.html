@@ -1,0 +1,13 @@
+<div ng-controller="ArticlesDetailCtrl">
+	<a href="#/articles">Articles</a>
+	<h1>{{article.title}}</h1>
+	<small>Posted on: <span ng-bind="article.date | date:'MM/dd/yyyy'"></span></small>
+	<hr>
+	<div>
+		{{article.body}}
+	</div>
+	<div class="actions">
+		<a href="#/articles/edit/{{article._id}}" class="btn btn-default">Edit</a>
+		<a href="#" class="btn btn-danger" ng-click="removeArticle(article._id)">Delete</a>
+	</div>
+</div>

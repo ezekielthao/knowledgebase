@@ -21,13 +21,4 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-router.get('/category/:category', function(req, res, next) {
-  Category.getCategoriesByCategory(req.params.category, function(err, categories){
-  	if (err) {
-  		console.log(error);
-  	}
-  	res.json(categories);
-  });
-});
-
 module.exports = router;
